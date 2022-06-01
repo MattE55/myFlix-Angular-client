@@ -3,20 +3,27 @@ $cardColor: #fff;
 $textColor: #343a40;
 $boxShadowColor: #e9ecef;
 
-.login {
+.synopsis {
   background-color: $cardColor;
   margin-top: 0px;
   box-shadow: none;
 }
 
-.login-title {
+.synopsis-title {
   color: $textColor;
 }
 
-.login-content {
+.synopsis-content {
   color: $textColor;
 }
 
-.login-actions {
-  display: flex;
+.synopsis-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px;
+  line-height: 14px;
+  min-width: auto;
+  border: none;
+  font-size: 20px;
 }

@@ -3,20 +3,20 @@ $cardColor: #fff;
 $textColor: #343a40;
 $boxShadowColor: #e9ecef;
 
-.login {
+.edit-profile {
   background-color: $cardColor;
   margin-top: 0px;
   box-shadow: none;
 }
 
-.login-title {
+.edit-profile-title {
   color: $textColor;
 }
 
-.login-content {
+.edit-profile-content {
   color: $textColor;
 }
 
-.login-actions {
+.edit-profile-actions {
   display: flex;
 }

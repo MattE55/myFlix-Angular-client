@@ -3,20 +3,27 @@ $cardColor: #fff;
 $textColor: #343a40;
 $boxShadowColor: #e9ecef;
 
-.login {
+.director {
   background-color: $cardColor;
   margin-top: 0px;
   box-shadow: none;
 }
 
-.login-title {
+.director-title {
   color: $textColor;
 }
 
-.login-content {
+.director-content {
   color: $textColor;
 }
 
-.login-actions {
-  display: flex;
+.director-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px;
+  line-height: 14px;
+  min-width: auto;
+  border: none;
+  font-size: 20px;
 }
