@@ -3,7 +3,7 @@ import { UserRegistrationService } from '../fetch-api-data.service';
 
 import { GenreCardComponent } from '../genre-card/genre-card.component';
 import { DirectorCardComponent } from '../director-card/director-card.component';
-import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component';
+//import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component';
 
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -73,11 +73,7 @@ export class MovieCardComponent {
 
   }
 
-  /**
-   * opens the user synopsis dialog from SynopsisComponent to displaying details
-   * @param title
-   * @param description
-   */
+  /*
   openSynopsisDialog(title: string, description: string): void {
     this.dialog.open(SynopsisCardComponent, {
       data: {
@@ -88,7 +84,7 @@ export class MovieCardComponent {
       width: '500px'
     });
 
-  }
+  }*/
 
   addToFavoriteMovies(id: string): void {
     console.log(id);
