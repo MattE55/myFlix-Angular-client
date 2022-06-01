@@ -1,0 +1,25 @@
+$backgroundColor: #f8f9fa;
+$cardColor: #fff;
+$textColor: #343a40;
+$boxShadowColor: #e9ecef;
+
+.genre {
+  background-color: $cardColor;
+  margin-top: 0px;
+  box-shadow: none;
+}
+
+.genre-title {
+  color: $textColor;
+}
+
+.genre-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px;
+  line-height: 14px;
+  min-width: auto;
+  border: none;
+  font-size: 20px;
+}
