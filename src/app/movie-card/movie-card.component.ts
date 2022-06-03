@@ -28,6 +28,11 @@ export class MovieCardComponent {
     this.getFavoriteMovies();
   }
 
+  /**
+   * GET: gets movies from api call and sets the movies state
+   * @returns array of movie objects
+   * @function getAllMovies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -36,6 +41,11 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * GET: gets favorite movies of user from an API call and sets the favorite movies state
+   * @returns array of users favorite movies
+   * @function getFavoriteMovies
+   */
   getFavoriteMovies(): void {
     this.fetchApiData.getFavoriteMovies().subscribe((resp: any) => {
       this.favoriteMovies = resp;
@@ -44,10 +54,21 @@ export class MovieCardComponent {
     });
   }
 
+  /**
+   * checks if the movie id is in the users favorite moveis array
+   * @param id 
+   * @returns the movie if the movie is in the array of favorite movies
+   */
   isFav(id: string): boolean {
     return this.favoriteMovies.includes(id)
   }
 
+  /**
+   * opens the genre dialog from GenreCardComponent to display details to the user
+   * @param name 
+   * @param description 
+   * @returns genre dialog of genre name and description to the user
+   */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreCardComponent, {
       data: {
@@ -59,7 +80,13 @@ export class MovieCardComponent {
     });
   }
 
-
+/**
+ * opens the director dialog from DirectorCardComponent to display details to the user
+ * @param name 
+ * @param bio 
+ * @param birthday 
+ * @returns director dialog of name bio and birthday to the user
+ */
   openDirectorDialog(name: string, bio: string, birthday: Date): void {
     this.dialog.open(DirectorCardComponent, {
       data: {
@@ -73,6 +100,12 @@ export class MovieCardComponent {
 
   }
 
+  /**
+   * opens the synopsis dialog from SynopsisCardComponent to display details to the user
+   * @param title 
+   * @param description 
+   * @returns synopsis card displaying movie details to the user
+   */
   openSynopsisDialog(title: string, description: string): void {
     this.dialog.open(SynopsisCardComponent, {
       data: {
@@ -85,6 +118,11 @@ export class MovieCardComponent {
 
   }
 
+  /**
+   * adds a movie to the array of users favorite movies
+   * @param id 
+   * @function addFavoriteMovie
+   */
   addToFavoriteMovies(id: string): void {
     console.log(id);
     this.fetchApiData.addFavoriteMovie(id).subscribe((result) => {
@@ -93,6 +131,11 @@ export class MovieCardComponent {
     })
   }
 
+  /**
+   * removes a movie from the array of users favorite movies
+   * @param id 
+   * @function removeFavoriteMovie
+   */
   removeFromFavoriteMovies(id: string): void {
     console.log(id);
     this.fetchApiData.removeFavoriteMovie(id).subscribe((result) => {
